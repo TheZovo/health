@@ -18,6 +18,7 @@ class TestWin(QWidget):
         self.move(win_x, win_y)
 
     def init_UI(self):
+        self.btn_next = QPushButton(txt_next, self)
         self.btn_test1 = QPushButton(txt_starttest1, self)
         self.btn_test2 = QPushButton(txt_starttest2, self)
         self.btn_test3 = QPushButton(txt_starttest3, self)
