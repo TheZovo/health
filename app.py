@@ -1,14 +1,7 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QGroupBox, QRadioButton, QListWidget, QLineEdit
-import PySide6
-import os
-from PySide6.QtWidgets import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout
 from instr import *
-# from second_win import *
-
-dirname = os.path.dirname(PySide6.__file__)
-plugin_path = os.path.join(dirname, 'plugins', 'platforms.x')
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
+from second_win import *
 
 
 class MainWin(QWidget):
@@ -36,7 +29,7 @@ class MainWin(QWidget):
         self.setLayout(self.layout_line)
 
     def next_click(self):
-        self.tw = TestWin()
+        # self.tw = TestWin()  # Не забудьте подключить TestWin, когда понадобится
         self.hide()
 
     def connects(self):
